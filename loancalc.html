@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Loan Calculator</title>
+
+
+  <script>
+function loan() {
+let r = document.getElementById("rate").value; // Monthly interest rate
+let PV = document.getElementById("pv").value; // Present Value (Loan amount)
+let n = document.getElementById("num").value; // Total number of periods (e.g., 30 years)
+
+// Calculate periodic payment (P)
+let P = (r * PV) / (1 - Math.pow(1 + r, -n));
+document.getElementById("ans").innerHTML = P;
+}
+  </script>
+  
+  
+</head>
+<body>
+
+  <p>First Number: <input id="rate"> <br>
+    Second Number: <input id="pv"> <br>
+    Third Number: <input id="num"> <br>
+    
+    <button onclick="loan()"> Add The Numbers </button>
+
+  </p>
+<p>
+Your Answer is <span id="P"> __________ </span></p>
+  
+</body>
+</html>
