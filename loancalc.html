@@ -11,7 +11,7 @@ let n = document.getElementById("num").value; // Total number of periods (e.g., 
 
 // Calculate periodic payment (P)
 let P = (r * PV) / (1 - Math.pow(1 + r, -n));
-document.getElementById("ans").innerHTML = P;
+document.getElementById("ans").innerHTML = P.toFixed(2);
 }
   </script>
   
@@ -27,7 +27,7 @@ document.getElementById("ans").innerHTML = P;
 
   </p>
 <p>
-Your Answer is <span id="P.toFixed(2)"> __________ </span></p>
+Your Answer is <span id="ans"> __________ </span></p>
   
 </body>
 </html>
