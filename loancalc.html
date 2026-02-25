@@ -11,7 +11,7 @@ let n = document.getElementById("num").value; // Total number of periods (e.g., 
 
 // Calculate periodic payment (P)
 let P = (r * PV) / (1 - Math.pow(1 + r, -n));
-document.getElementById("ans").innerHTML = P.toFixed(2);
+document.getElementById("ans").innerHTML = "If you take a loan for $"+pv + "Your interest rate per month will be $" + P.toFixed(2);
 }
   </script>
   
@@ -23,11 +23,11 @@ document.getElementById("ans").innerHTML = P.toFixed(2);
     Loan Amount: <input id="pv"> <br>
     Total Years: <input id="num"> <br>
     
-    <button onclick="loan()"> Add The Numbers </button>
+    <button onclick="loan()"> Calculate the Loan: </button>
 
   </p>
 <p>
-Your Answer is $<span id="ans"> __________ </span> / Month</p>
+<span id="ans"> __________ </span> </p>
   
 </body>
 </html>
