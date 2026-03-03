@@ -5,11 +5,10 @@
 
   <script>
 function loan() {
-let r = document.getElementById("rate").value; // Monthly interest rate
-let PV = document.getElementById("pv").value; // Present Value (Loan amount)
-let n = document.getElementById("num").value; // Total number of periods (e.g., 30 years)
+let r = document.getElementById("rate").value;
+let PV = document.getElementById("pv").value;
+let n = document.getElementById("num").value;
 
-// Calculate periodic payment (P)
  let P = ((r/100/12) * PV) / (1-(1+(r/100/12))**-(n*12));
   
 document.getElementById("ans").innerHTML = "If you take a loan of $"+PV + " for a total of "+n +  " years, your interest rate per month will be $" + P.toFixed(2);
